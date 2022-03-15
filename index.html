@@ -90,7 +90,7 @@
                 <div class="chat-name">
                     <div class="right-img-txt">
                         <div class="top-chat">
-                            <img src="img/avatar_1.jpg" alt=""> 
+                            <img src="img/avatar_1.jpg" alt="">
                         </div>
         
                         <div class="top-txt">
@@ -110,13 +110,12 @@
 
                 <div class="chat-message">
 
-                    <div class="bot">
-                        <div class="my-ans">Hai portato a spasso il cane?</div>
-                        <div class="my-ans">Ricordati di stendere i panni</div>
+                    <div  class="bot">
+                        <div v-for="(element, index) in arrChats[currentChatIndex].text" class="my-ans">{{ element.message }}</div>
                     </div>
 
                     <div class="human">
-                        <div class="bot-ans">Tutto fatto!</div>
+                        <div class="bot-ans">{{ arrChats[currentChatIndex].mess }}</div>
                     </div>
                 </div>
 
@@ -129,7 +128,7 @@
                     </div>
 
                     <div class="mess">
-                        <input class="input-mess" type="text" placeholder="Scrivi il messaggio">
+                        <input v-model="" class="input-mess" type="text" placeholder="Scrivi il messaggio">
                     </div>
 
                     <div class="mic">
