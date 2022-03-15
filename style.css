@@ -7,13 +7,14 @@
 /* class help */
 
 .txt-normal {font-size: 17px; color: black;}
-.txt-small {font-size: 14px; color: #d8dfe4;}
+.txt-small {font-size: 14px; color: lightgrey}
 
 .mr-bt{margin-bottom: .5rem;}
 
 img{
     width: 50px;
     height: 50px;
+    border-radius: 50%;
 }
 
 /* dimension div */
@@ -21,6 +22,7 @@ img{
 #root{
     width: 100%;
     height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +43,7 @@ img{
 .account{
     height: 60px;
     background-color: #eaeaea;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,7 +62,8 @@ img{
 .icons i{
     font-size: 18px;
     color: #b1b1b1;
-    padding: .4rem;;
+    padding: .4rem;
+    cursor: pointer;
 }
 
 .icons .fa-ellipsis-vertical{
@@ -71,6 +75,7 @@ img{
 .notifications{
     height: 70px;
     background-color: #8edafc;
+
     display: flex;
     justify-content: start;
     align-items: center;
@@ -87,6 +92,8 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
 }
 
 .fa-bell-slash{
@@ -107,15 +114,71 @@ img{
 /* section search */
 
 .search{
-    height: 35px;
+    height: 40px;
     background-color: #fafafa;
+
+    display: flex;
+    align-items: center;
 }
 
 .btn-search{
+    margin-left: .8rem;
     background-color: white;
     border: 1px solid white;
+    cursor: pointer;
 }
 
 .fa-magnifying-glass{
     color: #babdc0;
+    padding: .3rem 1.3rem;
+}
+
+.input-txt{
+    width: 82%;
+    padding: .3rem 0;
+    border: 1px solid white;
+}
+
+
+/* section chat */
+
+.all-chat{
+    overflow-y: scroll;
+}
+
+.chat{
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.chat:hover{
+    background-color: #e9ebeb;
+}
+
+.txt-avatar{
+    display: flex;
+}
+
+.img-avatar{
+    display: flex;
+    align-items: center;
+    margin-left: .7rem;
+}
+
+.txt{
+    margin: .4rem 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.time-mess{
+    margin: .4rem .4rem 0 0;
+    display: flex;
+    justify-content: end;
 }
