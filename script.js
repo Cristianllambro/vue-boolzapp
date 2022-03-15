@@ -18,7 +18,7 @@ const app = new Vue ({
                         message: 'Ricordati di stendere i panni',
                         status: 'sent',
                     },
-                ]
+                ],
             },
             {
                 name: 'Fabio',
@@ -33,7 +33,7 @@ const app = new Vue ({
                         message: 'Ricordati di stendere i panni',
                         status: 'sent',
                     },
-                ]
+                ],
             },
             {
                 name: 'Samuele',
@@ -52,7 +52,7 @@ const app = new Vue ({
                         message: 'Tutto fatto!',
                         status: 'recived',
                     },
-                ]
+                ],
             },
             {
                 name: 'Alessandro B.',
@@ -71,7 +71,7 @@ const app = new Vue ({
                         message: 'Tutto fatto!',
                         status: 'recived',
                     },
-                ]
+                ],
             },
             {
                 name: 'Alessandro U.',
@@ -90,7 +90,7 @@ const app = new Vue ({
                         message: 'Tutto fatto!',
                         status: 'recived',
                     },
-                ]
+                ],
             },
             {
                 name: 'Claudia',
@@ -109,7 +109,7 @@ const app = new Vue ({
                         message: 'Tutto fatto!',
                         status: 'recived',
                     },
-                ]
+                ],
             },
             {
                 name: 'Federico',
@@ -128,7 +128,7 @@ const app = new Vue ({
                         message: 'Tutto fatto!',
                         status: 'recived',
                     },
-                ]
+                ],
             },
             {
                 name: 'Davide',
@@ -151,7 +151,4 @@ const app = new Vue ({
             },
         ],
     },
-    // methods: {
-
-    // }
-});
+})
