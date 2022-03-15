@@ -20,7 +20,7 @@ img{
 /* dimension div */
 
 #root{
-    width: 90vw;
+    width: 100vw;
     height: 100vh;
     background-color:antiquewhite;
 
@@ -30,7 +30,7 @@ img{
 }
 
 .container-app{
-    width: 35%;
+    width: 30%;
     height: 85vh;
     background-color: white;
 }
@@ -250,14 +250,40 @@ img{
     background-image: url(img/mine.jpg);
 }
 
+.bot{
+    padding-right: 3rem;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .my-ans{
     width: 300px;
+    height: 50px;
     background-color: #d5f9ba;
 
-    padding: .8rem 3rem .8rem .8rem;
+    padding-left: 1rem;
     margin-bottom: 1rem;
+    margin-left: 3rem;
     border-radius: 10px;
 
+    display: flex;
+    align-items: center;
+}
+
+.human{
+    width: 300px;
+    height: 50px;
+    background-color: white;
+
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
 }
 
 /* section bot chat messagge */
