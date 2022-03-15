@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* class help */
+
+.txt-normal {font-size: 25px; color: black;}
+.txt-small {font-size: 18px; color: #d8dfe4;}
+
+.mr-bt{margin-bottom: .5rem;}
