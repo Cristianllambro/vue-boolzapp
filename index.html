@@ -6,12 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzap</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
+    <!-- start -->
+    <div id="root">
 
+        <div class="container-app">
+
+            <!-- left side app -->
+            <div class="left-side">
+
+                <!-- section account -->
+                <div class="account">
+                    <div class="left-chat">
+                        <img src="img/avatar-1.png" alt="img avatar chat">
+                        <p class="name-account txt-normal">Kristian</p>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+
+                <!-- section notification -->
+                <div class="notifications">
+                    <div class="silence">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+
+                    <div class="text-chat">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <p ><a class="only-p" href="#!">Attiva notifiche desktop</a></p>
+                    </div>
+                </div>
+
+                <!-- section search -->
+                <div class="search">
+                    <button class="btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <input type="text" placeholder="Cerca o inizia una nuona chat">
+                </div>
     
+                <!-- section chat -->
+                <div class="chat">
+                    <img src="img/avatar-1.png" alt="img avatar chat">
+                    <span class="name-avatar txt-normal">Michele</span>
+                    <span class="txt-small">Ultimo messaggio inviato</span>
+                    <span class="time-mess txt-small">12.00</span>
+                </div>
+            </div>
+    
+    
+            <!-- right side app -->
+            <div class="chat-side">
+    
+            </div>
+
+        </div>
+
+
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="script.js"></script>
 </body>
