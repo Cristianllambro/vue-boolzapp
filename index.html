@@ -8,6 +8,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -57,7 +61,7 @@
                 <!-- section chat -->
                 <div class="all-chat">
 
-                    <div v-for="(element, index) in arrChats" @click="currentChatsIndex = index" class="chat">
+                    <div v-for="(element, index) in arrChats" @click="currentChatIndex = index" class="chat">
 
                         <div class="txt-avatar">
     
@@ -67,7 +71,7 @@
     
                             <div class="txt">
                                 <span class="name-avatar txt-normal">{{ element.name }}</span>
-                                <span class="txt-small">{{ arrChats[currentChatIndex].mess }}</span>
+                                <span class="txt-small">{{ element.mess }}</span>
                             </div>
                         </div>
                         <span class="time-mess txt-small">12.00</span>
@@ -90,11 +94,11 @@
                 <div class="chat-name">
                     <div class="right-img-txt">
                         <div class="top-chat">
-                            <img :src="'img/' + arrChats.img" alt="">
+                            <img :src="'img/' + arrChats[currentChatIndex].img" alt="">
                         </div>
         
                         <div class="top-txt">
-                            <span>{{arrChats.name}}</span>
+                            <span>{{arrChats[currentChatIndex].name}}</span>
                             <span class="txt-under">Ultimo accesso oggi alle 12:00</span>
                         </div>
                     </div>
@@ -111,13 +115,13 @@
                 <div class="chat-message">
 
                     <div v-for="(element, index) in arrChats[currentChatIndex].text" class="human">
-                        <div class="my-ans">{{ element.message }} <span class="times">time</span></div>
+                        <div class="my-ans">{{ element.message }} <span class="times">12:10</span></div>
                     </div>
 
                     <div class="bot">
                         <div class="bot-ans">{{ arrChats[currentChatIndex].mess }}
                         </div>
-                        <span class="times-two">time</span>
+                        <span class="times-two">12:20</span>
                     </div>
                 </div>
 
@@ -130,7 +134,7 @@
                     </div>
 
                     <div class="mess">
-                        <input class="input-mess" type="text" placeholder="Scrivi il messaggio">
+                        <input @keyup.enter="addMessage" class="input-mess" type="text" placeholder="Scrivi il messaggio">
                     </div>
 
                     <div class="mic">

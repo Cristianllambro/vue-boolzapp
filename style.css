@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 /* class help */
 
 .txt-normal {font-size: 17px; color: black;}
-.txt-small {font-size: 14px; color: lightgrey}
+.txt-small {font-size: 10px; color: lightgrey}
 
 .mr-bt{margin-bottom: .5rem;}
 
@@ -259,7 +260,7 @@ img{
 }
 
 .times{
-    margin-left: 4rem;
+    margin-right: 1rem;
     margin-top: 2rem;
     font-size: 12px;
     color: lightgrey;
@@ -277,13 +278,14 @@ img{
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .times-two{
     font-size: 12px;
     color: lightgrey;
-    margin-top: 2.2rem;
-    margin-left: 11rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
 }
 
 .bot{
@@ -298,6 +300,7 @@ img{
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 /* section bot chat messagge */

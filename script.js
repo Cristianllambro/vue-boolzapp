@@ -2,6 +2,13 @@ const app = new Vue ({
     el: '#root',
     data: {
         currentChatIndex: 0,
+        strInput: '',
+
+        newMessage: {
+            mess: 'Ok',
+            message: '',
+        },
+
         arrChats:
         [
             {
@@ -12,11 +19,9 @@ const app = new Vue ({
                 [
                     {
                         message: 'Hai portato a spasso il cane?',
-                        status: 'sent',
                     },
                     {
                         message: 'Ricordati di stendere i panni',
-                        status: 'sent',
                     },
                 ],
             },
@@ -28,7 +33,6 @@ const app = new Vue ({
                 [
                     {
                         message: 'Hai studiato CSS?',
-                        status: 'sent',
                     },
                 ],
             },
@@ -40,11 +44,9 @@ const app = new Vue ({
                 [
                     {
                         message: 'Forza Roma!',
-                        status: 'sent',
                     },
                     {
-                        message: 'Ao non tifare Lazio!',
-                        status: 'sent',
+                        message: 'Non tifare Lazio!',
                     },
                 ],
             },
@@ -56,7 +58,6 @@ const app = new Vue ({
                 [
                     {
                         message: 'Hai capito Bootstrap?',
-                        status: 'sent',
                     },
                 ],
             },
@@ -68,11 +69,9 @@ const app = new Vue ({
                 [
                     {
                         message: 'Come si fa quella cosa in JS?',
-                        status: 'sent',
                     },
                     {
                         message: 'Non ho capito nulla delle funzioni!',
-                        status: 'sent',
                     },
                 ],
             },
@@ -84,11 +83,9 @@ const app = new Vue ({
                 [
                     {
                         message: 'Stasera usciamo?',
-                        status: 'sent',
                     },
                     {
                         message: 'Andiamo nel bar nuovo',
-                        status: 'sent',
                     },
                 ],
             },
@@ -100,11 +97,9 @@ const app = new Vue ({
                 [
                     {
                         message: 'Vado a giocare a calcio',
-                        status: 'sent',
                     },
                     {
                         message: 'Vieni?',
-                        status: 'sent',
                     },
                 ],
             },
@@ -116,14 +111,22 @@ const app = new Vue ({
                 [
                     {
                         message: 'Facciamo una partita a D&D?',
-                        status: 'sent',
                     },
                     {
                         message: 'Una bella campagna con il mago',
-                        status: 'sent',
                     },
                 ],
             },
         ],
     },
+    methods: {
+        addMessage() {
+            if(this.newMessage.text != '') {
+                this.newMessage.message == this.strInput;
+                this.arrChats.push(this.newMessage)
+                console.log(this.newMessage)
+
+            }
+        }
+    }
 })
