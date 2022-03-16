@@ -121,12 +121,10 @@ const app = new Vue ({
     },
     methods: {
         addMessage() {
-            if(this.newMessage.text != '') {
-                this.newMessage.message == this.strInput;
-                this.arrChats.push(this.newMessage)
-                console.log(this.newMessage)
+            this.newMessage.message == this.strInput;
+            this.arrChats.push(this.newMessage);
+            console.log()
 
-            }
         }
     }
 })

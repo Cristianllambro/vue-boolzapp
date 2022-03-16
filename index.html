@@ -134,7 +134,7 @@
                     </div>
 
                     <div class="mess">
-                        <input @keyup.enter="addMessage" class="input-mess" type="text" placeholder="Scrivi il messaggio">
+                        <input @keyup.enter="addMessage" v-model="newMessage.message" class="input-mess" type="text" placeholder="Scrivi il messaggio">
                     </div>
 
                     <div class="mic">
