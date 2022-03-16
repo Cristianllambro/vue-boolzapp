@@ -114,13 +114,12 @@
 
                 <div class="chat-message">
 
-                    <div v-for="(element, index) in arrChats[currentChatIndex].text" class="human">
+                    <div v-for="element in arrChats[currentChatIndex].text" class="human">
                         <div class="my-ans">{{ element.message }} <span class="times">12:10</span></div>
                     </div>
 
                     <div class="bot">
-                        <div class="bot-ans">{{ arrChats[currentChatIndex].mess }}
-                        </div>
+                        <div class="bot-ans">{{ arrChats[currentChatIndex].mess }}</div>
                         <span class="times-two">12:20</span>
                     </div>
                 </div>
@@ -134,7 +133,7 @@
                     </div>
 
                     <div class="mess">
-                        <input @keyup.enter="addMessage" v-model="newMessage.message" class="input-mess" type="text" placeholder="Scrivi il messaggio">
+                        <input @keyup.enter="addMessage" v-model="newMessage" class="input-mess" type="text" placeholder="Scrivi il messaggio">
                     </div>
 
                     <div class="mic">

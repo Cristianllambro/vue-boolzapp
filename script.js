@@ -2,7 +2,6 @@ const app = new Vue ({
     el: '#root',
     data: {
         currentChatIndex: 0,
-        strInput: '',
 
         newMessage: {
             mess: 'Ok',
@@ -121,10 +120,8 @@ const app = new Vue ({
     },
     methods: {
         addMessage() {
-            this.newMessage.message == this.strInput;
-            this.arrChats.push(this.newMessage);
-            console.log()
-
+            const newMessage = {...this.newMessage};
+            this.arrChats[this.currentChatIndex].text.message.push(newMessage)
         }
     }
 })
