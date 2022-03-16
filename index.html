@@ -67,7 +67,7 @@
     
                             <div class="txt">
                                 <span class="name-avatar txt-normal">{{ element.name }}</span>
-                                <span class="txt-small">Ultimo messaggio inviato</span>
+                                <span class="txt-small">{{ arrChats[currentChatIndex].mess }}</span>
                             </div>
                         </div>
                         <span class="time-mess txt-small">12.00</span>
@@ -111,11 +111,13 @@
                 <div class="chat-message">
 
                     <div v-for="(element, index) in arrChats[currentChatIndex].text" class="human">
-                        <div class="my-ans">{{ element.message }}</div>
+                        <div class="my-ans">{{ element.message }} <span class="times">time</span></div>
                     </div>
 
                     <div class="bot">
-                        <div class="bot-ans">{{ arrChats[currentChatIndex].mess }}</div>
+                        <div class="bot-ans">{{ arrChats[currentChatIndex].mess }}
+                        </div>
+                        <span class="times-two">time</span>
                     </div>
                 </div>
 

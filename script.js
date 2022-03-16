@@ -23,14 +23,11 @@ const app = new Vue ({
             {
                 name: 'Fabio',
                 img: 'avatar_2.jpg',
+                mess: 'Certo',
                 text:
                 [
                     {
-                        message: 'Hai portato a spasso il cane?',
-                        status: 'sent',
-                    },
-                    {
-                        message: 'Ricordati di stendere i panni',
+                        message: 'Hai studiato CSS?',
                         status: 'sent',
                     },
                 ],
@@ -38,114 +35,92 @@ const app = new Vue ({
             {
                 name: 'Samuele',
                 img: 'avatar_3.jpg',
+                mess: 'Sempre forza Roma!',
                 text:
                 [
                     {
-                        message: 'Hai portato a spasso il cane?',
+                        message: 'Forza Roma!',
                         status: 'sent',
                     },
                     {
-                        message: 'Ricordati di stendere i panni',
+                        message: 'Ao non tifare Lazio!',
                         status: 'sent',
-                    },
-                    {
-                        message: 'Tutto fatto!',
-                        status: 'recived',
                     },
                 ],
             },
             {
                 name: 'Alessandro B.',
                 img: 'avatar_4.jpg',
+                mess: 'Si!',
                 text:
                 [
                     {
-                        message: 'Hai portato a spasso il cane?',
+                        message: 'Hai capito Bootstrap?',
                         status: 'sent',
-                    },
-                    {
-                        message: 'Ricordati di stendere i panni',
-                        status: 'sent',
-                    },
-                    {
-                        message: 'Tutto fatto!',
-                        status: 'recived',
                     },
                 ],
             },
             {
                 name: 'Alessandro U.',
                 img: 'avatar_5.jpg',
+                mess: 'Hahahahahahaha!',
                 text:
                 [
                     {
-                        message: 'Hai portato a spasso il cane?',
+                        message: 'Come si fa quella cosa in JS?',
                         status: 'sent',
                     },
                     {
-                        message: 'Ricordati di stendere i panni',
+                        message: 'Non ho capito nulla delle funzioni!',
                         status: 'sent',
-                    },
-                    {
-                        message: 'Tutto fatto!',
-                        status: 'recived',
                     },
                 ],
             },
             {
                 name: 'Claudia',
                 img: 'avatar_6.jpg',
+                mess: 'Va bene',
                 text:
                 [
                     {
-                        message: 'Hai portato a spasso il cane?',
+                        message: 'Stasera usciamo?',
                         status: 'sent',
                     },
                     {
-                        message: 'Ricordati di stendere i panni',
+                        message: 'Andiamo nel bar nuovo',
                         status: 'sent',
-                    },
-                    {
-                        message: 'Tutto fatto!',
-                        status: 'recived',
                     },
                 ],
             },
             {
                 name: 'Federico',
                 img: 'avatar_7.jpg',
+                mess: 'Va bene',
                 text:
                 [
                     {
-                        message: 'Hai portato a spasso il cane?',
+                        message: 'Vado a giocare a calcio',
                         status: 'sent',
                     },
                     {
-                        message: 'Ricordati di stendere i panni',
+                        message: 'Vieni?',
                         status: 'sent',
-                    },
-                    {
-                        message: 'Tutto fatto!',
-                        status: 'recived',
                     },
                 ],
             },
             {
                 name: 'Davide',
                 img: 'avatar_8.jpg',
+                mess: 'Va bene',
                 text:
                 [
                     {
-                        message: 'Hai portato a spasso il cane?',
+                        message: 'Facciamo una partita a D&D?',
                         status: 'sent',
                     },
                     {
-                        message: 'Ricordati di stendere i panni',
+                        message: 'Una bella campagna con il mago',
                         status: 'sent',
-                    },
-                    {
-                        message: 'Tutto fatto!',
-                        status: 'recived',
                     },
                 ],
             },
