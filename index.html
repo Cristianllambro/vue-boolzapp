@@ -71,10 +71,10 @@
     
                             <div class="txt">
                                 <span class="name-avatar txt-normal">{{ element.name }}</span>
-                                <span class="txt-small">{{ element.mess }}</span>
+                                <span v-for="(element, index) in arrChats[currentChatIndex].text" class="txt-small">{{ element.newMessage }}</span>
                             </div>
                         </div>
-                        <span class="time-mess txt-small">12.00</span>
+                        <span class="time-mess txt-small">{{ element.time }}</span>
     
                     </div>
     
@@ -99,7 +99,7 @@
         
                         <div class="top-txt">
                             <span>{{arrChats[currentChatIndex].name}}</span>
-                            <span class="txt-under">Ultimo accesso oggi alle 12:00</span>
+                            <span class="txt-under">Ultimo accesso {{arrChats[currentChatIndex].date}} </span>
                         </div>
                     </div>
 
@@ -114,14 +114,14 @@
 
                 <div class="chat-message">
 
-                    <div v-for="element in arrChats[currentChatIndex].text" class="human">
-                        <div class="my-ans">{{ element.message }} <span class="times">12:10</span></div>
+                    <div class="human">
+                        <div v-for="element in arrChats[currentChatIndex].text" 
+                        :class="{ myAns: element.sent, bot: !element.sent}" >
+                        {{ element.message }}<span class="times">{{ element.time }}</span>
+                    </div>
+                        
                     </div>
 
-                    <div class="bot">
-                        <div class="bot-ans">{{ arrChats[currentChatIndex].mess }}</div>
-                        <span class="times-two">12:20</span>
-                    </div>
                 </div>
 
 
@@ -133,7 +133,7 @@
                     </div>
 
                     <div class="mess">
-                        <input @keyup.enter="addMessage" v-model="newMessage" class="input-mess" type="text" placeholder="Scrivi il messaggio">
+                        <input @keyup.enter="addMessage" v-model="newMessage.message" class="input-mess" type="text" placeholder="Scrivi il messaggio">
                     </div>
 
                     <div class="mic">
@@ -148,6 +148,7 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.1/build/global/luxon.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="script.js"></script>
