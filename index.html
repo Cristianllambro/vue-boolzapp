@@ -61,7 +61,7 @@
                 <!-- section chat -->
                 <div class="all-chat">
 
-                    <div v-for="(element, index) in arrChats" @click="currentChatIndex = index" v-show="element" class="chat">
+                    <div v-for="(element, index) in arrChats" @click="currentChatIndex = index" :class="{hidden: element.name.visible, hidden: !element.name.visible}" class="chat">
 
                         <div class="txt-avatar">
     
