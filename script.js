@@ -212,6 +212,7 @@ const app = new Vue ({
                     console.log(element.name + 'vero')
                 } else {
                     element.name.visible = false;
+                    console.log(element.name + 'falso')
 
                 };
             });

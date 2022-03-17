@@ -61,9 +61,9 @@
                 <!-- section chat -->
                 <div class="all-chat">
 
-                    <div v-for="(element, index) in arrChats" @click="currentChatIndex = index"  class="chat">
+                    <div v-for="(element, index) in arrChats" @click="currentChatIndex = index" v-show="element" class="chat">
 
-                        <div v-show="element.name" class="txt-avatar">
+                        <div class="txt-avatar">
     
                             <div class="img-avatar">
                                 <img :src="'img/' + element.img" alt="img avatar chat">
