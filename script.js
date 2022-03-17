@@ -204,15 +204,15 @@ const app = new Vue ({
 
         searchName() {
             this.arrChats.forEach(element => {
-
-                // console.log(element.name)
                 
                 if(element.name.includes(this.searchStr)) {
-                    element.name.visible = true;
-                    console.log(element.name + 'vero')
+                    element.name.visible;
+
+                    console.log(element.name + ' ' +'VERO')
                 } else {
                     element.name.visible = false;
-                    console.log(element.name + 'falso')
+                    
+                    console.log(element.name + ' ' + 'FALSO')
 
                 };
             });

@@ -61,7 +61,7 @@
                 <!-- section chat -->
                 <div class="all-chat">
 
-                    <div v-for="(element, index) in arrChats" @click="currentChatIndex = index" :class="{hidden: element.name.visible, hidden: !element.name.visible}" class="chat">
+                    <div v-for="(element, index) in arrChats" @click="currentChatIndex = index" :class="{ hidden: !element.name}" class="chat">
 
                         <div class="txt-avatar">
     
@@ -71,7 +71,7 @@
     
                             <div class="txt">
                                 <span class="name-avatar txt-normal">{{ element.name }}</span>
-                                <span v-for="(element, index) in arrChats[currentChatIndex].text" class="txt-small">{{ element.newMessage }}</span>
+                                <span class="txt-small">{{  }}</span>
                             </div>
                         </div>
                         <span class="time-mess txt-small">{{ element.time }}</span>
