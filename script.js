@@ -2,6 +2,7 @@ const app = new Vue ({
     el: '#root',
     data: {
         currentChatIndex: 0,
+        searchStr: '',
 
         newMessage: {
             message: '',
@@ -15,6 +16,7 @@ const app = new Vue ({
                 img: 'avatar_1.jpg',
                 date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                 time: luxon.DateTime.now().toFormat("HH:mm"),
+                visible: true,
                 text: 
                 [
                     {
@@ -37,6 +39,7 @@ const app = new Vue ({
                 img: 'avatar_2.jpg',
                 date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                 time: luxon.DateTime.now().toFormat("HH:mm"),
+                visible: true,
                 text:
                 [
                     {
@@ -53,7 +56,8 @@ const app = new Vue ({
                 name: 'Samuele',
                 img: 'avatar_3.jpg', 
                 date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
-                time: luxon.DateTime.now().toFormat("HH:mm"),    
+                time: luxon.DateTime.now().toFormat("HH:mm"),
+                visible: true,   
                 text:
                 [
                     {
@@ -75,6 +79,7 @@ const app = new Vue ({
                 img: 'avatar_4.jpg',
                 date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                 time: luxon.DateTime.now().toFormat("HH:mm"),
+                visible: true,
                 text:
                 [
                     {
@@ -92,6 +97,7 @@ const app = new Vue ({
                 img: 'avatar_5.jpg',
                 date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                 time: luxon.DateTime.now().toFormat("HH:mm"),
+                visible: true,
                 text:
                 [
                     {
@@ -113,6 +119,7 @@ const app = new Vue ({
                 img: 'avatar_6.jpg',
                 date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                 time: luxon.DateTime.now().toFormat("HH:mm"),
+                visible: true,
                 text:
                 [
                     {
@@ -134,6 +141,7 @@ const app = new Vue ({
                 img: 'avatar_7.jpg',
                 date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                 time: luxon.DateTime.now().toFormat("HH:mm"),
+                visible: true,
                 text:
                 [
                     {
@@ -155,6 +163,7 @@ const app = new Vue ({
                 img: 'avatar_8.jpg',
                 date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                 time: luxon.DateTime.now().toFormat("HH:mm"),
+                visible: true,
                 text:
                 [
                     {
@@ -176,14 +185,14 @@ const app = new Vue ({
     methods: {
 
         addMessage() {
-            let newMessage = {...this.newMessage};
+            let message = {...this.newMessage};
             this.newMessage.message = '';
-            this.postAddMessage(newMessage)
+            this.postAddMessage(message)
             setTimeout(this.otherMess, 1000);
         },
 
-        postAddMessage(newMessage) {
-            this.arrChats[this.currentChatIndex].text.push(newMessage);
+        postAddMessage(message) {
+            this.arrChats[this.currentChatIndex].text.push(message);
         },
 
         otherMess(){
@@ -193,10 +202,20 @@ const app = new Vue ({
             });
         },
 
-        filterName() {
+        searchName() {
+            this.arrChats.forEach(element => {
 
-            const NameFilter = this.arrChats.filter(arrChats => this.arrChats.name == this.name);
-            return NameFilter;
+                // console.log(element.name)
+                
+                if(element.name.includes(this.searchStr)) {
+                    element.name.visible = true;
+                    console.log(element.name + 'vero')
+                } else {
+                    element.name.visible = false;
+
+                };
+            });
+                
         }
     },
 });

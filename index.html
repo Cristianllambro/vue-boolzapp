@@ -55,15 +55,15 @@
                     <button class="btn-search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <input class="input-txt" type="text" placeholder="Cerca o inizia una nuona chat">
+                    <input @keyup="searchName" v-model="searchStr" class="input-txt" type="text" placeholder="Cerca o inizia una nuona chat">
                 </div>
     
                 <!-- section chat -->
                 <div class="all-chat">
 
-                    <div v-for="(element, index) in arrChats" @click="currentChatIndex = index" class="chat">
+                    <div v-for="(element, index) in arrChats" @click="currentChatIndex = index"  class="chat">
 
-                        <div class="txt-avatar">
+                        <div v-show="element.name" class="txt-avatar">
     
                             <div class="img-avatar">
                                 <img :src="'img/' + element.img" alt="img avatar chat">
