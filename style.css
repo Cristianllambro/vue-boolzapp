@@ -324,3 +324,7 @@ img{
     padding: .4rem;
     cursor: pointer;
 }
+
+.hidden{
+    display: none;
+}
