@@ -187,7 +187,7 @@ const app = new Vue ({
         addMessage() {
             let message = {...this.newMessage};
             this.newMessage.message = '';
-            this.postAddMessage(message)
+            this.postAddMessage(message);
             setTimeout(this.otherMess, 1000);
         },
 
@@ -196,7 +196,7 @@ const app = new Vue ({
         },
 
         otherMess(){
-            this.postAddMessage({
+            this.postAddMessage.trim({
                 message: 'ok',
                 sent: false,
             });
@@ -206,17 +206,17 @@ const app = new Vue ({
             this.arrChats.forEach(element => {
                 
                 if(element.name.includes(this.searchStr)) {
-                    element.name.visible;
-
-                    console.log(element.name + ' ' +'VERO')
-                } else {
-                    element.name.visible = false;
+                    element.visible = true;
                     
-                    console.log(element.name + ' ' + 'FALSO')
+                } else {
+                    element.visible = false;
 
                 };
-            });
-                
+            });  
+        },
+
+        lastMessage() {
+            
         }
     },
 });

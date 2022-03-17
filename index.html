@@ -28,7 +28,7 @@
                 <div class="account">
                     <div class="left-chat">
                         <img src="img/avatar_io.jpg" alt="img avatar chat">
-                        <p class="name-account txt-normal">Kristian</p>
+                        <p class="name-account txt-normal">Jessica</p>
                     </div>
 
                     <div class="icons">
@@ -61,7 +61,7 @@
                 <!-- section chat -->
                 <div class="all-chat">
 
-                    <div v-for="(element, index) in arrChats" @click="currentChatIndex = index" :class="{ hidden: !element.name}" class="chat">
+                    <div v-for="(element, index) in arrChats" @click="currentChatIndex = index" :class="{ hidden: !element.visible, active: currentChatIndex == index}" class="chat">
 
                         <div class="txt-avatar">
     
@@ -71,7 +71,7 @@
     
                             <div class="txt">
                                 <span class="name-avatar txt-normal">{{ element.name }}</span>
-                                <span class="txt-small">{{  }}</span>
+                                <span class="txt-small"></span>
                             </div>
                         </div>
                         <span class="time-mess txt-small">{{ element.time }}</span>
@@ -117,7 +117,7 @@
                     <div class="human">
                         <div v-for="element in arrChats[currentChatIndex].text" 
                         :class="{ myAns: element.sent, bot: !element.sent}" >
-                        {{ element.message }}<span class="times">{{ element.time }}</span>
+                        {{ element.message }}<span class="times">{{ arrChats[currentChatIndex].time }}</span>
                     </div>
                         
                     </div>

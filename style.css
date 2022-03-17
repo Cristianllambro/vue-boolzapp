@@ -161,7 +161,7 @@ img{
     border-bottom: none;
 }
 
-.chat:hover{
+.active{
     background-color: #e9ebeb;
 }
 
