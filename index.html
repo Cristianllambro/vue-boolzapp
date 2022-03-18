@@ -27,8 +27,8 @@
                 <!-- section account -->
                 <div class="account">
                     <div class="left-chat">
-                        <img src="img/avatar_io.jpg" alt="img avatar chat">
-                        <p class="name-account txt-normal">Jessica</p>
+                        <img src="img/avatar_2.jpg" alt="img avatar chat">
+                        <p class="name-account txt-normal">Kristian</p>
                     </div>
 
                     <div class="icons">
@@ -117,11 +117,18 @@
                     <div class="human">
                         <div v-for="element in arrChats[currentChatIndex].text" 
                         :class="{ myAns: element.sent, bot: !element.sent}" >
-                        {{ element.message }}<span class="times">{{ arrChats[currentChatIndex].time }}</span>
-                    </div>
-                        
-                    </div>
+                            {{ element.message }}
 
+                            <div class="txt-help">
+                                <select name="txt-select" id="txt-select">
+                                    <option value="zero"></option>
+                                    <option value="info">Info message</option>
+                                    <option value="delete">Delete message</option>
+                                </select>
+                                <span class="times">{{ arrChats[currentChatIndex].time }}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 

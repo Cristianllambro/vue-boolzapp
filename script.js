@@ -35,8 +35,8 @@ const app = new Vue ({
                 ],
             },
             {
-                name: 'Fabio',
-                img: 'avatar_2.jpg',
+                name: 'Jessica',
+                img: 'avatar_io.jpg',
                 date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
                 time: luxon.DateTime.now().toFormat("HH:mm"),
                 visible: true,
@@ -196,7 +196,7 @@ const app = new Vue ({
         },
 
         otherMess(){
-            this.postAddMessage.trim({
+            this.postAddMessage({
                 message: 'ok',
                 sent: false,
             });
